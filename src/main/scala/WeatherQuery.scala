@@ -67,7 +67,7 @@ def weatherQuery(lat: Double, lon: Double) =
   // units=kelvin, imperial, metric
   // appid needs to come from a config, not part of the git repo
   val request = basicRequest
-    .get(uri"https://api.openweathermap.org/data/2.5/weather?lat=$lat&lon=$lon&units=imperial&appid=e1f275e3a303b94e45642c452568ea22")
+    .get(uri"https://api.openweathermap.org/data/2.5/weather?lat=$lat&lon=$lon&units=imperial&appid=<need a valid app id here>")
     .response(asJson[WeatherResponse])
 
   // synchronous (on purpose)

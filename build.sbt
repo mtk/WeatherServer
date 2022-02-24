@@ -14,8 +14,8 @@ lazy val root = project
       "dev.zio" %% "zio-test" % zioVersion % "test",
       "dev.zio" %% "zio-test-sbt" % zioVersion % "test",
       "com.novocode" % "junit-interface" % "0.11" % "test",
-      "com.softwaremill.sttp.client3" %% "circe" % "3.4.1",
-      "io.d11" % "zhttp_3" % "2.0.0-RC3",
+      "com.softwaremill.sttp.client3" %% "circe" % "3.5.0",
+      "io.d11" % "zhttp_3" % "2.0.0-RC4",
       "io.circe" %% "circe-generic" % "0.14.1"
     ),
 

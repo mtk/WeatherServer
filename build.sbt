@@ -1,6 +1,6 @@
-val scala3Version = "3.1.1"
+val scala3Version = "3.1.2"
 val sttpClient3Version = "3.4.1"
-val zioVersion = "2.0.0-RC2"
+val zioVersion = "2.0.0-RC5"
 
 lazy val root = project
   .in(file("."))
@@ -14,8 +14,8 @@ lazy val root = project
       "dev.zio" %% "zio-test" % zioVersion % "test",
       "dev.zio" %% "zio-test-sbt" % zioVersion % "test",
       "com.novocode" % "junit-interface" % "0.11" % "test",
-      "com.softwaremill.sttp.client3" %% "circe" % "3.5.0",
-      "io.d11" % "zhttp_3" % "2.0.0-RC4",
+      "com.softwaremill.sttp.client3" %% "circe" % "3.5.2",
+      "io.d11" % "zhttp_3" % "2.0.0-RC7",
       "io.circe" %% "circe-generic" % "0.14.1"
     ),
 

@@ -25,6 +25,6 @@ object WeatherServer extends App {
   }
 
   // Run it like any simple app
-  def run(args: List[String]): URIO[zio.ZEnv, ExitCode] =
+  def run(args: List[String]): URIO[Any, ExitCode] =
     Server.start(8090, app).exitCode
 }

@@ -1,4 +1,3 @@
-
 // for scala-cli
 //> using lib "com.softwaremill.sttp.client3::core:3.4.1"
 //> using lib "com.softwaremill.sttp.client3::circe:3.4.1"
@@ -23,9 +22,9 @@ import io.circe.generic.auto._
 // argue that every field should be Option'al but that would be tedious.
 
 type TS = Int                           // unix time.  but
-                                        // org.joda.time.DateTime?
-                                        // DateTime would need circe
-                                        // codecs.
+					// org.joda.time.DateTime?
+					// DateTime would need circe
+					// codecs.
 
 case class Coord (lon: Double, lat: Double)
 case class Weather (id: Int, main: String, description: String, icon: String)
@@ -35,7 +34,7 @@ type Visibility = Int                   // undocumented??? examples seem to be I
 case class Wind (speed: Double, deg: Int, gust: Option[Double])
 case class Clouds (all: Double)
 case class Rain (`1h`: Option[Double], `3h`: Option[Double])
-case class Snow (`1h`: Option[Double], `3h`: Option[Double]) 
+case class Snow (`1h`: Option[Double], `3h`: Option[Double])
 type Dt = TS                           // unix time
 // type, id, and message are 'internal' parameters??
 // sunrise and sunset are unix times
@@ -74,4 +73,3 @@ def weatherQuery(lat: Double, lon: Double) =
   val response = request.send(backend)
 
   response.body
-
